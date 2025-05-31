@@ -61,7 +61,7 @@ def read_books(
     return db_books
 
 
-@app.post("/book/", response_model=schemas.BookCreate)
+@app.post("/book/", response_model=schemas.Book)
 def create_book(
         book: schemas.BookCreate,
         db: Session = Depends(get_db),
